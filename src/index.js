@@ -1,7 +1,10 @@
-import {greeting} from './functions';
+import {Character} from './character';
 import $ from 'jquery';
 import './styles.css';
 
-$(document).ready(function(){
-  $('#jsOutput').text(greeting());
+$(document).ready(function() {
+  let me = new Character();
+  me.sortHouse();
+  
+
 });

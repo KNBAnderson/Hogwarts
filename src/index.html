@@ -1,19 +1,148 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="jestTest environment">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+
+<head>
+  <title></title>
+</head>
+
+<body>
+
   <output id="jsOutput"></output>
-  </body>
+  <div id="welcome">
+    <h3>Welcome to Hogwarts! You are about to begin Year <span class="currentYear"></span></h3>
+  </div>
+
+  <div id="beforeSorting">
+    <h3>At Hogwarts we have four houses. You will be sorted about one of these.</h3>
+    <h4>Oh, you may not think I’m pretty, <br>
+      But don’t judge on what you see, <br>
+      I’ll eat myself if you can find <br>
+      A smarter hat than me. <br>
+      You can keep your bowlers black, <br>
+      Your top hats sleek and tall, <br>
+      For I’m the Hogwarts Sorting Hat <br>
+      And I can cap them all. <br>
+      There’s nothing hidden in your head <br>
+      The Sorting Hat can’t see, <br>
+      So try me on and I will tell you <br>
+      Where you ought to be. <br>
+      You might belong in Gryffindor, <br>
+      Where dwell the brave at heart, <br>
+      Their daring, nerve and chivalry <br>
+      Set Gryffindors apart; <br>
+      You might belong in Hufflepuff, <br>
+      Where they are just and loyal, <br>
+      Those patient Hufflepuffs are true <br>
+      And unafraid of toil; <br>
+      Or yet in wise old Ravenclaw, <br>
+      If you’ve a ready mind, <br>
+      Where those of wit and learning, <br>
+      Will always find their kind; <br>
+      Or perhaps in Slytherin <br>
+      You’ll make your real friends, <br>
+      Those cunning folk use any means <br>
+      To achieve their ends. <br>
+      So put me on! Don’t be afraid! <br>
+      And don’t get in a flap! <br>
+      You’re in safe hands (though I have none) <br>
+      For I’m a Thinking Cap! -Sorting Hat</h4>
+    <button type="button" id="sortButton">Click here to be sorted</button>
+  </div>
+
+  <div id="afterSorting">
+    <!-- gif goes here -->
+    <h5>Congratulations! You've been sorted into <span class="houseName"></span>!</h5>
+    <button type="button" id="commonRoomButton">Click here to go to your common room.</button>
+  </div>
+
+  <div id="commonRoom">
+    <h5>Welcome to your common room, <span class="houseName"></span>! Here is a list of your fellow classmates:</h5>
+    <span id="classList"></span>
+  </div>
+
+  <div id="spells">
+    <h5>Today you will be learning <span id="spellName"></span>. This spell is used to <span id="spellInfo"></span>.
+    </h5>
+    <h6>To master this spell, you must click <span id="spellClickNumber"></span>times in 30 seconds.</h6>
+  </div>
+
+  <div id="yearPuzzle">
+    <!-- potion image -->
+    <div id="yearOnePuzzle">
+      <h6>
+        Danger lies before you, while safety lies behind, <br>
+        Two of us will help you, whichever you would find, <br>
+        One among us seven will let you move ahead, <br>
+        Another will transport the drinker back instead, <br>
+        Two among our number hold only nettle wine, <br>
+        Three of us are killers, waiting hidden in line. <br>
+        Choose, unless you wish to stay here forevermore, <br>
+        To help you in your choice, we give you these clues four: <br>
+        First, however slyly the poison tries to hide <br>
+        You will always find some on nettle wine's left side; <br>
+        Second, different are those who stand at either end, <br>
+        But if you would move onward, neither is your friend; <br>
+        Third, as you see clearly, all are different size, <br>
+        Neither dwarf nor giant holds death in their insides; <br>
+        Fourth, the second left and the second on the right <br>
+        Are twins once you taste them, though different at first sight. <br>
+        <br>
+        -- The Potion Riddle (PS16)
+      </h6>
+      <form action="submit" id="potionGuess">
+        <label for="potion">Which potion do you choose?</label>
+        <select>
+        <option value="-1">One</option>
+        <option value="0">Two</option>
+        <option value="1">Three</option>
+        <option value="-1">Four</option>
+        <option value="-1">Five</option>
+        <option value="0">Six</option>
+        <option value="0">Seven</option>
+      </select>
+      </form>
+      <div id="potionResult"></div>
+    </div>
+    <div id="yearTwoPuzzle">
+      <h5>Solve this riddle and whisper the password to get into the hidden chamber</h5>
+      <p>If you have me, you want to share me. If you share me, you haven't got me. What am I?</p>
+      <form id="chamberForm">
+        <input type="text" id="chamberPassword">
+        <button type="submit">*Whisper*</button>
+      </form>
+    </div>
+
+    <div id="yearThreePuzzle">
+      <img src="#" alt="the whomping willow">
+      <h5>Press the right knot on the tree to calm it down</h5>
+    </div>
+
+    <div id="yearFourPuzzle">
+      <!-- maze stuff????? -->
+    </div>
+
+    <div id="yearFivePuzzle">
+      <form id="patronusQuiz">
+        <!-- Stuff here, 3 patronus options for now -->
+        <button type="submit">Find out what your patronus is</button>
+      </form>
+    </div>
+
+    <div id="YearSixPuzzle">
+      <!-- Memory Game -->
+    </div>
+
+    <div id="YearSevenPuzzle">
+      <!-- ISpy past puzzle backgrounds plus one more -->
+    </div>
+  </div>
+
+  <div id="endOfYear">
+    <h5 id="anotherYear">Congratulations, youve made it through another year at Hogwarts! Enjoy your summer and we will see you back next year</h5>
+    <div id="passFail">Congratulations, you made it through your final year of Hogwarts! <span id="studentResult"></span></div>
+  </div>
+
+
+
+</body>
+
 </html>
