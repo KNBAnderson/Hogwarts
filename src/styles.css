@@ -1,5 +1,14 @@
+
+/* var welcome = document.getElementById('welcomeImg');
+welcomeImg.src = welcome; */
+
+
 #jsOutput {
   color: red;
+}
+
+#welcome {
+  background-image: url('./img/WelcomeToNewYear.jpg');
 }
 
 .red {

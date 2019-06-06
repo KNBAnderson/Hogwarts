@@ -14,7 +14,7 @@ export class Character {
         let body = JSON.parse(response);
         let house = body;
         this.house = house;
-        $('.houseName').text(this.house);
+        
         return potterInfo.getClassmates(this.house);
       })
       .then(response => {

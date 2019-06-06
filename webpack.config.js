@@ -23,9 +23,22 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.(css|eot|svg|ttf|woff|jpg|png)$/i, 
         use: ['style-loader','css-loader']
       },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+                use: [
+                  {
+                    loader: 'file-loader',
+                    options: {
+                      name: '[path][name].[ext]',
+                    },
+  
+                  },
+                ],
+              },
+  
       {
         test: /\.js$/,
         exclude: [/node_modules/,/spec/],
