@@ -2,6 +2,22 @@
   color: red;
 }
 
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
 
 /* <style type="text/css">
 body {cursor: url(http://www.rw-designer.com/cursor-extern.php?id=75779);}
