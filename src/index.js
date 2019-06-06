@@ -4,7 +4,9 @@ import './styles.css';
 
 $(document).ready(function() {
   let me = new Character();
-  me.sortHouse();
+  $('#sortButton').click(function() {
+    me.sortHouse();
+  })
   
 
 });
