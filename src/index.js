@@ -4,6 +4,7 @@ import './styles.css';
 
 $(document).ready(function() {
   let me = new Character();
+  // me.populateSpells();
   $('#sortButton').click(function() {
     me.populateClass();
     $('#beforeSorting').hide();
