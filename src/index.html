@@ -13,7 +13,7 @@
 
   <div id="beforeSorting">
     <h3>At Hogwarts we have four houses. You will be sorted about one of these.</h3>
-    <h4>Oh, you may not think I’m pretty, <br>
+    <h4><em>Oh, you may not think I’m pretty, <br>
       But don’t judge on what you see, <br>
       I’ll eat myself if you can find <br>
       A smarter hat than me. <br>
@@ -44,19 +44,21 @@
       So put me on! Don’t be afraid! <br>
       And don’t get in a flap! <br>
       You’re in safe hands (though I have none) <br>
-      For I’m a Thinking Cap! -Sorting Hat</h4>
-    <button type="button" id="sortButton">Click here to be sorted</button>
+      For I’m a Thinking Cap!</em> -Sorting Hat</h4>
+    <button type="button" id="sortButton">Get sorted</button>
   </div>
 
   <div id="afterSorting">
     <!-- gif goes here -->
     <h5>Congratulations! You've been sorted into <span class="houseName"></span>!</h5>
-    <button type="button" id="commonRoomButton">Click here to go to your common room.</button>
+    <button type="button" id="commonRoomButton">Go to your common room.</button>
   </div>
 
   <div id="commonRoom">
     <h5>Welcome to your common room, <span class="houseName"></span>! Here is a list of your fellow classmates:</h5>
-    <span id="classList"></span>
+    <button type="button" id="beginClasses">Begin your classes.</button>
+    <button type="button" id="viewClassmates">View your common room.</button>
+    <ul id="classList"></ul>
   </div>
 
   <div id="spells">

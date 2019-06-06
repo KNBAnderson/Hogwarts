@@ -5,8 +5,8 @@ import './styles.css';
 $(document).ready(function() {
   let me = new Character();
   $('#sortButton').click(function() {
-    me.sortHouse();
+    me.populateClass();
+    $('#beforeSorting').hide();
+    $('#afterSorting').show();
   })
-  
-
 });
